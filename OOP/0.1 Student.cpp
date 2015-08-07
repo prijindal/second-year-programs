@@ -17,9 +17,9 @@ class Student {
   }
 
   string get_data() {
-    string date;
-    date = "%d/%d/%d",date, month, year; // INVALID SYNTAX
-    return date;
+    string dateInFormat;
+    dateinFormat = to_string(date) + "/" + to_string(month) + "/" +to_string(year);
+    return dateinFormat;
   }
 }
 
