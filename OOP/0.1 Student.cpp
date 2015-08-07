@@ -1,3 +1,6 @@
+/* This is a simple class Student has some attibutes,
+  it has a function to accept data and another one which converts that data
+    Nothing Fancy :) */
 #include <iostream>
 using namespace std;
 
