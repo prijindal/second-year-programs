@@ -11,7 +11,7 @@ class Employee {
 
   public:
   void input();
-}
+};
 
 void Employee::input() {
   cout<<"Enter name: ";
