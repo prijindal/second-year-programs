@@ -24,7 +24,7 @@ class Address {
     cout<<"City: "<<city<<endl;
     cout<<"State: "<<state<<endl;
   }
-}
+};
 
 class Student {
   string name, course;
@@ -60,7 +60,7 @@ class Student {
       addresses[i].display();
     }
   }
-}
+};
 
 class Employee {
   int id_no;
@@ -84,7 +84,7 @@ class Employee {
       cin>>ch;
       i++;
     }
-    no_addr=i+1;
+    no_addr=i;
   }
 
   void display() {
@@ -97,7 +97,7 @@ class Employee {
       addresses[i].display();
     }
   }
-}
+};
 
 int main() {
   Student S;

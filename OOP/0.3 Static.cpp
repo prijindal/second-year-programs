@@ -11,7 +11,7 @@
 
 class Template {
   int data; // This will be unique to an object
-  static common; // This will be common to all the objects of the class
+  static int common; // This will be common to all the objects of the class
 
   // You can do the same using functions
   int uniqueFunction() {
@@ -21,4 +21,4 @@ class Template {
   static int commonFunction() {
     return -1;
   }
-}
+};

@@ -39,7 +39,7 @@ class Stack {
       }
     }
     void push(int data) {
-      if(!isStackEmpty()) {
+      if(!isStackFull()) {
         list[size] = data;
         size++;
       }

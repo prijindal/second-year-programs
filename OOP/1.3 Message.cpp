@@ -7,6 +7,7 @@ class Phone {
   float imei[10];
   float number[10];
 
+  public:
   void send_message(float phone, string message) {
     static string messagesList[10];
     static int n_messages;
@@ -27,7 +28,7 @@ class Phone {
   void insert() {
     int i;
     cout<<"Enter brand name\n";
-    cin>>name;
+    cin>>brand;
     cout<<"Enter no. of sim card\n";
     cin>>sims;
     for(i = 0;i<sims;++i) {
@@ -40,7 +41,7 @@ class Phone {
 
   void display() {
     int i;
-    cout<<"Brand name: "<<name<<endl;
+    cout<<"Brand name: "<<brand<<endl;
     cout<<"No. of sim cards: "<<sims<<endl;
     cout<<"SIM details\n";
     for(i = 0;i<sims;++i) {
@@ -51,7 +52,7 @@ class Phone {
 };
 
 int main() {
-  Phone P;
+  Phone p;
   p.insert();
   p.send_message(9981, "A small light message!");
   p.send_message(9982, "Another small little message!");

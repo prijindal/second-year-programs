@@ -1,6 +1,8 @@
 /*
   We can pass an object of a class like any other data,
   Let me repeat Object not the class*/
+#include <iostream>
+using namespace std;
 
 class Student {
   public: // Here I am making everything public to make it easier, but it is a bad idea to do so
@@ -8,7 +10,7 @@ class Student {
   int reg_no;
   int class_number;
   int roll_no;
-}
+};
 
 void display_Student(Student S) {
   cout<<S.reg_no;
@@ -27,5 +29,5 @@ Student create_student() {
 
 int main() {
   Student Pri = create_student();
-  display_Student(S);
+  display_Student(Pri);
 }

@@ -11,7 +11,8 @@ class List {
     }
 
     void insert(int data, int position) {
-      for(i = 0;i<size;++i) {
+      int i;
+      for(i = position;i<size;++i) {
         list[i] = list[i-1];
       }
       list[position] = data;
@@ -41,7 +42,7 @@ class List {
       for(i = 0;i<size;++i) {
         int temp = list[i];
         list[i] = list[size-i-1];
-        list[size-l-i] = temp;
+        list[size-i-i] = temp;
       }
     }
 

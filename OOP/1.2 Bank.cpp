@@ -4,7 +4,7 @@ using namespace std;
 struct Transaction {
   string from, to;
   int amount;
-}
+};
 
 class Account {
   int acc_no;
@@ -17,7 +17,6 @@ class Account {
 
   Account() {
     n_transactions = 0;
-    input();
     input();
   }
 
@@ -38,7 +37,7 @@ class Account {
     withdrawee.balance+=amount;
     balance-=amount;
     withdrawee.add_transaction(name, withdrawee.name, amount);
-    add_transaction(name, withdrawee.name, amount;);
+    add_transaction(name, withdrawee.name, amount);
   }
 
   void print() {
@@ -46,8 +45,8 @@ class Account {
     cout<<"Name of Account holder: "<<name<<endl;
     cout<<"Balance in Account No. "<<acc_no<<" is "<<balance<<endl;
 
-    for(i = 0;i<=n_transactions;++i) {
-      cout<<i+1<<". Transfer of "<<n_transactions[i].amount<<" from "<<n_transactions[i].from<<" to "<<n_transactions[i].to<<endl;
+    for(i = 0;i<n_transactions;++i) {
+      cout<<i+1<<". Transfer of "<<all[i].amount<<" from "<<all[i].from<<" to "<<all[i].to<<endl;
     }
   }
 

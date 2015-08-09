@@ -6,10 +6,10 @@ class Student {
   int age;
   string email_id;
 
-  void check_duplicate(Student all[],int size, string temp_reg_no) {
+  bool check_duplicate(Student all[],int size, string temp_reg_no) {
     int i;
     for(i = 0;i<size;++i) {
-      if(all.reg_no == temp_reg_no) {
+      if(all[i].reg_no == temp_reg_no) {
         return true;
       }
     }
@@ -46,13 +46,13 @@ class Student {
 };
 
 int main() {
-  Student A,B,C;
+  Student A[3];
 
-  A.input();
-  B.input();
-  C.input();
+  A[0].input(A, 3);
+  A[1].input(A, 3);
+  A[2].input(A, 3);
 
-  A.display();
-  B.display();
-  C.display();
+  A[0].display();
+  A[0].display();
+  A[0].display();
 }

@@ -2,6 +2,8 @@
   Basically the conventional method is to do it like func2
   but if you want u can do it using fun1 which will behave in exactly the same manner
 */
+#include <iostream>
+using namespace std;
 
 class Student {
   int data;
@@ -11,7 +13,7 @@ class Student {
   void func2() {
     cout<<data;
   }
-}
+};
 
 void Student::func1() {
   cout<<data;
