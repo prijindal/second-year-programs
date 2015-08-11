@@ -54,11 +54,10 @@ int main() {
   input(A);
   display(A);
   update(A, 1, "Pri");
-  display(A);
+  //display(A);
   update(A, 2, "607");
-  display(A);
+  //display(A);
   update(A, 3, "false");
   display(A);
   del(A);
-  display(A);
 }

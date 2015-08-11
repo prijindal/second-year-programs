@@ -23,6 +23,7 @@ class Phone {
     for(i = 0;i<n_messages;++i) {
       cout<<i+1<<". "<<messagesList[i]<<endl;
     }
+    cout<<'\n';
   }
 
   void insert() {
@@ -45,8 +46,8 @@ class Phone {
     cout<<"No. of sim cards: "<<sims<<endl;
     cout<<"SIM details\n";
     for(i = 0;i<sims;++i) {
-      cout<<i+1<<". Phone number: "<<number[i];
-      cout<<i+1<<". IMEI number: "<<imei[i];
+      cout<<i+1<<". Phone number: "<<number[i]<<endl;
+      cout<<i+1<<". IMEI number: "<<imei[i]<<endl;
     }
   }
 };
