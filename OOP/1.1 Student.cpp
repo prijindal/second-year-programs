@@ -48,11 +48,15 @@ class Student {
 int main() {
   Student A[3];
 
-  A[0].input(A, 3);
-  A[1].input(A, 3);
-  A[2].input(A, 3);
+  int i,n;
+  cout<<"How many students are there?: ";
+  cin>>n;
 
-  A[0].display();
-  A[0].display();
-  A[0].display();
+  for (i = 0; i < n; i++) {
+    A[i].input(A, n);
+  }
+
+  for (i = 0; i < n; i++) {
+    A[i].display();
+  }
 }

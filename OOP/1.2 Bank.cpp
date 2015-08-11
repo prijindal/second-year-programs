@@ -27,13 +27,13 @@ class Account {
     n_transactions++;
   }
 
-  void deposit(Account depositer, int amount) {
+  void deposit(Account &depositer, int amount) {
     depositer.balance-=amount;
     balance+=amount;
     depositer.add_transaction(depositer.name, name, amount);
     add_transaction(depositer.name, name, amount);
   }
-  void withdraw(Account withdrawee, int amount) {
+  void withdraw(Account &withdrawee, int amount) {
     withdrawee.balance+=amount;
     balance-=amount;
     withdrawee.add_transaction(name, withdrawee.name, amount);
@@ -48,6 +48,7 @@ class Account {
     for(i = 0;i<n_transactions;++i) {
       cout<<i+1<<". Transfer of "<<all[i].amount<<" from "<<all[i].from<<" to "<<all[i].to<<endl;
     }
+    cout<<'\n';
   }
 
   void input() {
@@ -57,12 +58,17 @@ class Account {
     cin>>acc_no;
     cout<<"Enter Initial Balance: ";
     cin>>balance;
+    cout<<'\n';
   }
 };
 
 int main() {
-  Account A,B;
+  Account A,B,C;
   A.deposit(B, 500);
-  B.print();
+  B.deposit(C, 200);
+  C.withdraw(A, 200);
+
   A.print();
+  B.print();
+  C.print();
 }

@@ -9,6 +9,11 @@ class Student {
   int data;
 
   public:
+
+  Student() {
+    data = 50;
+  }
+
   inline void func1();
   void func2() {
     cout<<data;
@@ -17,4 +22,10 @@ class Student {
 
 void Student::func1() {
   cout<<data;
+}
+
+int main() {
+  Student A;
+  A.func1();
+  A.func2();
 }
