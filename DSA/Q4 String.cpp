@@ -82,6 +82,7 @@ int main() {
   S.insertCharacterInString('P',1);
   S.stringReverse();
   S.display();
+  A.stringReverse();
   S.deletePartOfString(A);
   S.display();
 }
