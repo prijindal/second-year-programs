@@ -1,4 +1,3 @@
-// INVALID LOGIC
 #include <iostream>
 using namespace std;
 

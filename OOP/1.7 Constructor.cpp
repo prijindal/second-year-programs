@@ -7,14 +7,17 @@ class Computer {
   float HDD;
   float speed;
   float price;
+  static int count;
 
   public:
   Computer() {
+    count++;
     cout<<"Object is being created\n";
   }
 
   Computer(Computer &copied){
     cout<<"Copying Object...\n";
+    count++;
     assembled = copied.assembled;
     ram = copied.ram;
     HDD = copied.HDD;
@@ -23,6 +26,7 @@ class Computer {
   }
 
   ~Computer() {
+    count--;
     cout<<"Object is being destroyed\n";
   }
 
@@ -43,6 +47,9 @@ class Computer {
     cout<<"\n";
   }
 };
+
+int Computer::count = 0;
+
 int main() {
   Computer A;
   A.input();
