@@ -54,8 +54,13 @@ class String {
   void deletePartOfString(String A) {
     int pos = searchPartOfString(A);
     int i, l = A.getStringLength();
-    if (searchPartOfString(A) >=0) {
-      cout<<"Deleting...";
+    int n = getStringLength() - l;
+    if (pos >=0) {
+      cout<<"Deleting...\n";
+      for (i = pos; i < n; i++) {
+        list[i] = list[i+l];
+      }
+      size-=l;
     }
     else {
       cout<<"Not Found!";
@@ -63,7 +68,11 @@ class String {
   }
 
   void display() {
-    cout<<list<<endl;
+    int i;
+    for (i = 0; i < size; i++) {
+      cout<<list[i];
+    }
+    cout<<'\n';
   }
 };
 
@@ -71,4 +80,5 @@ int main() {
   String S, A;
   S.display();
   S.deletePartOfString(A);
+  S.display();
 }
