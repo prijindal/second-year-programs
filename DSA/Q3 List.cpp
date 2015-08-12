@@ -12,8 +12,8 @@ class List {
 
     void insert(int data, int position) {
       int i;
-      for(i = position;i<size;++i) {
-        list[i] = list[i-1];
+      for(i = size;i>=position;--i) {
+        list[i+1] = list[i];
       }
       list[position] = data;
       size++;
@@ -37,29 +37,27 @@ class List {
       return -1;
     }
 
-    int traverse() {
-      int i;
-      for(i = 0;i<size;++i) {
-        int temp = list[i];
-        list[i] = list[size-i-1];
-        list[size-i-i] = temp;
-      }
-    }
-
-    void display() {
+    void traverse() {
       int i;
       for(i = 0;i<size;++i) {
         cout<<i+1<<". "<<list[i]<<endl;
       }
+      cout<<'\n';
     }
 };
 
 int main() {
   List l;
   l.insert(5,0);
-  l.display();
   l.insert(10,1);
-  l.display();
+  l.insert(15,2);
+  l.insert(16,1);
+  l.insert(20,3);
+
+  l.traverse();
   l.deleteAt(1);
-  l.display();
+  l.traverse();
+
+  cout<<l.search(16)<<endl;
+  cout<<l.search(10)<<endl;
 }

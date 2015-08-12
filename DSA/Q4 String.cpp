@@ -19,8 +19,8 @@ class String {
 
   void insertCharacterInString(char data, int position) {
     int i;
-    for(i = position;i<size;++i) {
-      list[i] = list[i-1];
+    for(i = size;i>=position;--i) {
+      list[i+1] = list[i];
     }
     list[position] = data;
     size++;
@@ -28,10 +28,10 @@ class String {
 
   void stringReverse() {
     int i;
-    for(i = 0;i<size;++i) {
+    for(i = 0;i<size/2;++i) {
       int temp = list[i];
       list[i] = list[size-i-1];
-      list[size-i-i] = temp;
+      list[size-i-1] = temp;
     }
   }
 
@@ -78,6 +78,9 @@ class String {
 
 int main() {
   String S, A;
+  S.display();
+  S.insertCharacterInString('P',1);
+  S.stringReverse();
   S.display();
   S.deletePartOfString(A);
   S.display();
