@@ -1,4 +1,4 @@
-// name,  phone number, accno, balanc user’s personal details can be modified directly
+ // name,  phone number, accno, balanc user’s personal details can be modified directly
 // deposit, withdrawal, statement print, and pin change operations by checking for  minimum balance and other conditions
 // Create a new account for the same user by copying the basic details of the user using a copy constructor
 #include <iostream>
@@ -20,7 +20,6 @@ public:
     balance = 1000;
     count++;
     accno = count;
-    balance = 0;
     pin = 1111;
     cout<<"Your new pin is: "<<pin<<'\n';
   }
@@ -31,7 +30,6 @@ public:
     balance = A.balance;
     count++;
     accno = count;
-    balance = 0;
     pin = 1111;
     cout<<"Your new pin is: "<<pin<<'\n';
   }
