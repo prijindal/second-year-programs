@@ -1,0 +1,10 @@
+CSE220 – DSA – Cycle sheet 2 – FALL SEMESTER 2014-15
+Declare and initialise an INTEGER ARRAY of size AT LEAST 16 and
+11) Search an integer in the array based on Binary Searchalgorithm
+12) Sort based on Bubble Sort Algorithm
+13) Sort based on Selection SortAlgorithm
+14) Sort based on Insertion SortAlgorithm
+15) Sort based on Merge SortAlgorithm
+16) Sort based on Quick SortAlgorithm.
+17) Sort based on Heap SortAlgorithm. First perform the Heapify process to get the Heap list
+from the normal list, then do heap sort on the Heal list.
