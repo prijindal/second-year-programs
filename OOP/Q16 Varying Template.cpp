@@ -17,23 +17,39 @@ class Queue {
 			size = 0;
 		}
 		
+		bool isFull() {
+			return size==100;
+		}
+		bool isEmpty() {
+			return size==0;
+		}
+		
 		void enqueue(T newData) {
-			list[size] = newData;
-			size++;
+			if(!isFull()){
+				list[size] = newData;
+				size++;
+			}
 		}
 		
 		T dequeue() {
 			int i;
-			T result = list[0];
-			for(i = 0;i<size-1;++i){
-				list[i] = list[i+1];
+			T result;
+			if(isEmpty()) {
+				return 0;
 			}
-			return result;
+			else {
+				result = list[0];
+				for(i = 0;i<size-1;++i){
+					list[i] = list[i+1];
+				}
+				size--;
+				return result;
+			}
 		}
 		
 		void display() {
 			int i;
-			for(int i;i<size;++i) {
+			for(i=0 ;i<size;++i) {
 				cout<<i+1<<": "<<list[i]<<endl;
 			}
 			cout<<'\n';
@@ -41,6 +57,7 @@ class Queue {
 		
 		void menu() {
 			int ch;
+			T D;
 			while(true) {
 				cout<<"Choose an operation\n";
 				cout<<"1. Enqueue\n";
@@ -50,7 +67,6 @@ class Queue {
 				cin>>ch;
 				switch(ch) {
 					case 1:
-						T D;
 						cout<<"Enter new data\n";
 						cin>>D;
 						enqueue(D);
